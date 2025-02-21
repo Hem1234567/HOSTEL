@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black">
+
+     <nav
+      class="fixed w-full z-20 top-0 start-0 border-b border-black-200 dark:border-black-600 bg-opacity-10 backdrop-blur-md text-white"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img loading="lazy" src="/" class="h-10 rounded-4xl" alt="" />
+        </a>
+        <div
+          class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse justify-center items-center"
+        >
+          <a href="login.html">
+            <button
+              class="hidden md:block bg-green-400 px-6 py-2 rounded-full font-medium hover:bg-gray-300 text-black"
+            >
+              Login
+            </button>
+          </a>
+          <button
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black-500 rounded-lg md:hidden hover:underline focus:outline-none focus:ring-2 focus:ring-black-200 dark:text-black-400 dark:active:bg-green-700 dark:focus:ring-black-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="hidden md:block items-center justify-between w-full md:flex md:w-auto md:order-1"
+          id="navbar-cta"
+        >
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-black-100 rounded-lg bg-black-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-black-800 md:dark:bg-black-900 dark:border-black-700"
+          >
+            <li class="list-none md:list-item">
+              <a
+                href="/"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Home</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="login.html"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >About Us</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="/Call For Papers"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Endangered Species</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="/past-events"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Farmers’ Portal</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="map.html"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Interactive Map</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="/sponsors"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="/FAQ"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Resources/Education</a
+              >
+            </li>
+            <li class="list-none md:list-item">
+              <a
+                href="/contact"
+                class="block py-2 px-3 md:p-0 rounded md:bg-transparent text-gray-300 hover:text-green-400"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <script>
+      // Select the mobile menu button and the navigation menu
+      const menuButton = document.querySelector(
+        'button[aria-controls="navbar-sticky"]'
+      );
+      const menu = document.getElementById("navbar-cta");
+
+      // Toggle menu visibility when the mobile menu button is clicked
+      menuButton.addEventListener("click", () => {
+        // Check if the menu is currently visible
+        const isMenuVisible = menu.classList.contains("hidden");
+
+        // Toggle visibility based on the current state
+        if (isMenuVisible) {
+          menu.classList.remove("hidden"); // Show the menu
+          menuButton.setAttribute("aria-expanded", "true"); // Update aria-expanded attribute
+        } else {
+          menu.classList.add("hidden"); // Hide the menu
+          menuButton.setAttribute("aria-expanded", "false"); // Update aria-expanded attribute
+        }
+      });
+    </script>
+
+</body>
